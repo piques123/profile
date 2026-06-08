@@ -1,2 +1,2 @@
 # profile
-currículum
+Projeto Currículum Online
