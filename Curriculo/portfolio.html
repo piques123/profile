@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pietro Rogani | Portfólio</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<style>
+    .footer-link {
+        transition: .25s ease;
+    }
+
+    .footer-link:hover {
+        color: #0d6efd !important;
+        transform: translateY(-2px);
+    }
+
+    .social-btn {
+        transition: .3s ease;
+    }
+
+    .social-btn:hover {
+        transform: translateY(-4px);
+    }
+
+    .navbar {
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .08);
+    }
+
+    /* CAROUSEL */
+
+    .carousel {
+        margin-bottom: 60px;
+    }
+
+    .carousel-inner {
+        transition: .4s ease;
+    }
+
+    .carousel-item img {
+        cursor: pointer;
+        transition: .35s ease;
+        border-radius: 12px;
+    }
+
+    .carousel-item img:hover {
+        transform: scale(1.01);
+    }
+
+    /* INDICADORES */
+
+    .carousel-indicators {
+        bottom: -45px;
+    }
+
+    .carousel-indicators button {
+        width: 35px !important;
+        height: 4px !important;
+
+        border-radius: 50px;
+
+        margin: 0 4px !important;
+
+        background-color: #ced4da !important;
+
+        opacity: .7;
+
+        transition: .3s ease;
+    }
+
+    .carousel-indicators button.active {
+        background-color: #0d6efd !important;
+
+        opacity: 1;
+
+        width: 50px !important;
+    }
+
+    /* SETAS */
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        transition: .3s ease;
+    }
+
+    .carousel-control-prev:hover .carousel-control-prev-icon,
+    .carousel-control-next:hover .carousel-control-next-icon {
+        transform: scale(1.15);
+    }
+
+    /* MODAL */
+
+    .modal-content {
+        border: none;
+        border-radius: 18px;
+    }
+
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-footer {
+        border-top: none;
+    }
+
+    .badge-tech {
+        font-size: .9rem;
+        margin-right: 5px;
+    }
+
+    /* BLUR */
+
+    .modal-backdrop.show {
+        opacity: .3;
+    }
+
+    .modal.show {
+        backdrop-filter: blur(8px);
+    }
+
+    .carousel-inner {
+        height: 700px;
+        background: #fff;
+    }
+
+    .carousel-item {
+        height: 700px;
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: contain;
+    }
+</style>
+
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+
+            <a class="navbar-brand fw-bold" href="home.html">
+                Currículo Online()
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">
+                            Home
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="portfolio.html">
+                            Portfólio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main class="container py-5 flex-grow-1">
+
+        <div class="text-center mb-4">
+
+            <h1 class="fw-bold display-5">
+                Portfólio
+            </h1>
+
+            <p class="text-secondary fs-5">
+                Projetos desenvolvidos durante minha formação técnica.
+            </p>
+
+        </div>
+
+        <!-- CAROUSEL -->
+        <div id="portfolioCarousel" class="carousel slide">
+
+            <!-- INDICADORES -->
+            <div class="carousel-indicators">
+
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true">
+                </button>
+
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1">
+                </button>
+
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2">
+                </button>
+
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3">
+                </button>
+
+                <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="4">
+                </button>
+
+            </div>
+
+            <!-- SLIDES -->
+            <div class="carousel-inner rounded-4 shadow-lg bg-white overflow-hidden">
+
+                <!-- PROJETO 1 -->
+                <div class="carousel-item active text-center">
+
+                    <img src="img/p1.png" alt="Métodos HTTP" class="img-fluid" data-bs-toggle="modal"
+                        data-bs-target="#projeto1Modal">
+
+                </div>
+
+                <!-- PROJETO 2 -->
+                <div class="carousel-item text-center">
+
+                    <img src="img/p2.png" alt="Personalizador de Perfil" class="img-fluid" data-bs-toggle="modal"
+                        data-bs-target="#projeto2Modal">
+
+                </div>
+
+                <!-- PROJETO 3 -->
+                <div class="carousel-item text-center">
+
+                    <img src="img/p3.png" alt="Projeto 3" class="img-fluid" data-bs-toggle="modal"
+                        data-bs-target="#projeto3Modal">
+
+                </div>
+
+                <!-- PROJETO 4 -->
+                <div class="carousel-item text-center">
+
+                    <img src="img/p4.png" alt="Projeto 4" class="img-fluid" data-bs-toggle="modal"
+                        data-bs-target="#projeto4Modal">
+
+                </div>
+
+                <!-- PROJETO 5 -->
+                <div class="carousel-item text-center">
+
+                    <img src="img/p5.png" alt="Projeto 5" class="img-fluid" data-bs-toggle="modal"
+                        data-bs-target="#projeto5Modal">
+
+                </div>
+
+            </div>
+
+            <!-- ANTERIOR -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+
+            </button>
+
+            <!-- PRÓXIMO -->
+            <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+
+            </button>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-light py-4 mt-auto">
+
+        <div class="container">
+
+            <div class="row align-items-center text-center text-md-start">
+
+                <div class="col-md-4">
+
+                    <h5>Contato</h5>
+
+                    <p class="mb-1">
+                        pietro.rogani@portalsesisp.org.br
+                    </p>
+
+                    <p class="mb-0">
+                        Botucatu - SP
+                    </p>
+
+                </div>
+
+                <div class="col-md-4 text-center">
+
+                    <h5>Navegação</h5>
+
+                    <div class="d-flex justify-content-center gap-3">
+
+                        <a href="home.html" class="text-decoration-none text-light footer-link">
+                            Home
+                        </a>
+
+                        <a href="portfolio.html" class="text-decoration-none text-light footer-link">
+                            Portfólio
+                        </a>
+
+                        <a href="contato.html" class="text-decoration-none text-light footer-link">
+                            Contato
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+
+                    <a href="https://github.com/" class="btn btn-outline-light btn-sm me-2 social-btn">
+
+                        <i class="bi bi-github"></i>
+                        GitHub
+
+                    </a>
+
+                    <a href="https://linkedin.com/" class="btn btn-outline-light btn-sm social-btn">
+
+                        <i class="bi bi-linkedin"></i>
+                        LinkedIn
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="text-center">
+
+                <small>
+                    © 2026 Pietro Rogani. Todos os direitos reservados.
+                </small>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- MODAL 1 -->
+    <div class="modal fade" id="projeto1Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Métodos HTTP
+                    </h5>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Sistema desenvolvido para demonstrar os principais métodos HTTP utilizados em APIs REST.
+                    </p>
+
+                    <span class="badge bg-primary badge-tech">HTML</span>
+                    <span class="badge bg-success badge-tech">CSS</span>
+                    <span class="badge bg-warning text-dark badge-tech">JavaScript</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL 2 -->
+    <div class="modal fade" id="projeto2Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Personalizador de Perfil
+                    </h5>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Aplicação para customização de informações pessoais e visual do usuário.
+                    </p>
+
+                    <span class="badge bg-primary badge-tech">HTML</span>
+                    <span class="badge bg-success badge-tech">CSS</span>
+                    <span class="badge bg-info badge-tech">Bootstrap</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL 3 -->
+    <div class="modal fade" id="projeto3Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Projeto 3
+                    </h5>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Sistema CRUD desenvolvido para gerenciamento de registros, permitindo criar, visualizar, editar
+                        e excluir informações de forma dinâmica através de integração entre interface e banco de dados.
+                    </p>
+
+                    <span class="badge bg-primary badge-tech">HTML</span>
+                    <span class="badge bg-success badge-tech">CSS</span>
+                    <span class="badge bg-warning text-dark badge-tech">JavaScript</span>
+                    <span class="badge bg-dark badge-tech">MySQL</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL 4 -->
+    <div class="modal fade" id="projeto4Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Projeto 4
+                    </h5>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Aplicativo mobile desenvolvido com Expo e React Native, focado na criação de interfaces
+                        responsivas e na experiência do usuário em dispositivos Android e iOS.
+                    </p>
+
+                    <span class="badge bg-info badge-tech">React Native</span>
+                    <span class="badge bg-primary badge-tech">Expo</span>
+                    <span class="badge bg-dark badge-tech">JavaScript</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL 5 -->
+    <div class="modal fade" id="projeto5Modal" tabindex="-1">
+
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">
+                        Projeto 5
+                    </h5>
+
+                    <button class="btn-close" data-bs-dismiss="modal">
+                    </button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <p>
+                        Software desenvolvido para auxiliar no controle e monitoramento de medicamentos, permitindo o
+                        gerenciamento de estoque, cadastro de fármacos e acompanhamento das movimentações realizadas.
+                    </p>
+
+                    <span class="badge bg-primary badge-tech">Python</span>
+                    <span class="badge bg-success badge-tech">SQLite</span>
+                    <span class="badge bg-secondary badge-tech">Tkinter</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
